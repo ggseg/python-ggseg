@@ -1,0 +1,6 @@
+matplotlib>=3.4
+numpy>=1.21
+# testing
+nose>=1.2.1
+coverage>=4.5
+coveralls

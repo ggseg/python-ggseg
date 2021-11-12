@@ -10,12 +10,12 @@ with open(op.join(this_directory, 'README.md')) as f:
 setuptools.setup(
      name='ggseg',
      version=__version__,
-     summary='ggseg',
+     summary='Python module for ggseg-like visualizations',
      author='Greg Operto',
      author_email='goperto@barcelonabeta.org',
      url='https://github.com/ggseg/python-ggseg',
      packages=setuptools.find_packages(),
-     description='ggseg',
+     description='Python module for ggseg-like visualizations',
      long_description=long_description,
      long_description_content_type='text/markdown',
 
@@ -30,7 +30,8 @@ setuptools.setup(
           'Topic :: Utilities',
           'Programming Language :: Python :: 3.8',
      ],
-     install_requires=[],
+     install_requires=['matplotlib>=3.4',
+                       'numpy>=1.21]'],
      platforms='any',
      include_package_data=True
 )

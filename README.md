@@ -40,7 +40,7 @@ Then be passed to the `ggseg.plot_dk` function:
 import ggseg
 ggseg.plot_dk(data, cmap='Spectral', figsize=(15,15),
               background='k', edgecolor='w', bordercolor='gray',
-              ylabel='Cortical thickness', title='Title of the figure')
+              ylabel='Cortical thickness (mm)', title='Title of the figure')
 ```
 
 ![DK](https://raw.githubusercontent.com/ggseg/python-ggseg/main/doc/dk01.jpg)

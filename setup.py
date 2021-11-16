@@ -31,7 +31,7 @@ setuptools.setup(
           'Programming Language :: Python :: 3.8',
      ],
      install_requires=['matplotlib>=3.4',
-                       'numpy>=1.21]'],
+                       'numpy>=1.21'],
      platforms='any',
      include_package_data=True
 )

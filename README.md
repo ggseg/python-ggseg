@@ -5,6 +5,7 @@
 
 # python-ggseg
 
+Python module for ggseg-like visualizations. 
 
 ## Dependencies
 

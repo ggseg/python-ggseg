@@ -1,4 +1,4 @@
-__version__ = '0.1.a3'
+__version__ = '0.1'
 
 
 def _svg_parse_(path):

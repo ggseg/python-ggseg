@@ -5,7 +5,7 @@
 
 # python-ggseg
 
-Python module for ggseg-like visualizations. 
+Python module for ggseg-like visualizations.
 
 ## Dependencies
 
@@ -84,7 +84,7 @@ data = {'Anterior thalamic radiation L': 0.3004812598228455,
 ```
 
 ```python
-ggseg.plot_jhu(data_jhu, background='k', edgecolor='w', cmap='Spectral',
+ggseg.plot_jhu(data, background='k', edgecolor='w', cmap='Spectral',
                bordercolor='gray', ylabel='Mean Fractional Anisotropy',
                title='Title of the figure')
 ```

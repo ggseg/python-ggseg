@@ -1,4 +1,7 @@
-import unittest
+import matplotlib
+matplotlib.use("Agg")  # non-GUI backend for CI
+
+import ggseg
 
 data_dk = {'bankssts_left': 2.48,
            'caudalanteriorcingulate_left': 2.228,
@@ -116,15 +119,40 @@ data_jhu = {'Anterior thalamic radiation L': 0.3004812598228455,
             'Superior longitudinal fasciculus (temporal part) L': 0.2622972726821899,
             'Superior longitudinal fasciculus (temporal part) R': 0.3504709601402283}
 
+def test_all_plot_functions_run():
+    """
+    Ensure all ggseg plotting functions run without crashing.
+    """
 
-class RunThemAll(unittest.TestCase):
+    ggseg.plot_dk(
+        data_dk,
+        background="w",
+        edgecolor="k",
+        cmap="hot",
+    )
 
-    def test_001(self):
-        import ggseg
-        ggseg.plot_dk(data_dk, background='w', edgecolor='k', cmap='hot')
-        ggseg.plot_dk(data_dk, background='w', edgecolor='k', cmap='hot',
-                      vminmax=[2.5, 3.5])
-        ggseg.plot_aseg(data_aseg, background='k', edgecolor='w',
-                        bordercolor='gray', cmap='Spectral', ylabel='volume')
-        ggseg.plot_jhu(data_jhu, background='k', edgecolor='w',
-                       bordercolor='gray', cmap='Spectral', ylabel='volume')
+    ggseg.plot_dk(
+        data_dk,
+        background="w",
+        edgecolor="k",
+        cmap="hot",
+        vminmax=[2.5, 3.5],
+    )
+
+    ggseg.plot_aseg(
+        data_aseg,
+        background="k",
+        edgecolor="w",
+        bordercolor="gray",
+        cmap="Spectral",
+        ylabel="volume",
+    )
+
+    ggseg.plot_jhu(
+        data_jhu,
+        background="k",
+        edgecolor="w",
+        bordercolor="gray",
+        cmap="Spectral",
+        ylabel="volume",
+    )

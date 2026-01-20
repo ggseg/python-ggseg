@@ -27,7 +27,9 @@ jobs:
 
       - run: sudo apt-get update
       - run: pip install -r requirements-dev.txt
-      - run: nosetests ggseg/tests --nocapture --nologcapture --with-coverage --cover-erase --cover-inclusive --cover-package .
+      - run: pip install -e .
+      - run: pip install pytest pytest-cov
+      - run: pytest ggseg/tests --cov=ggseg --cov-report=term-missing
         env:
           CI_TEST: 0
           PYTHONPATH: $PYTHONPATH:$(pwd)
